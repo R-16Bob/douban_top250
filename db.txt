@@ -1,0 +1,20 @@
+mysql> create database douban；
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use douban
+Database changed
+
+————————
+create table top250(
+rank int primary key,
+name char(20),
+rate char(4),
+quote char(50),
+staff char(80)
+);
+
+————————
+//记得加这句，否则会有错误
+alter table top250 convert to character set utf8mb4 collate utf8mb4_bin; 
+
+insert into top250 values(76,'海豚湾','9.3','海豚的微笑，是世界上最高明的伪装。','导演: 路易·西霍尤斯 Louie Psihoyos/主演: Richard O'Barry / 路易·西霍')
